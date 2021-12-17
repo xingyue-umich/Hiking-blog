@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mix It Up</title>
+</head>
+<body>
+	<button type="button" data-filter="all">All</button>
+	<button type="button" data-filter=".category-a">Category A</button>
+	<button type="button" data-filter=".category-b">Category B</button>
+	<button type="button" data-filter=".category-c">Category C</button>
+
+	<button type="button" data-sort="order:asc">Ascending</button>
+	<button type="button" data-sort="order:descending">Descending</button>
+	<button type="button" data-sort="random">Random</button>
+
+
+
+
+
+
+	<div class="container">
+    <div class="mix category-a" data-order="1">A - 1</div>
+    <div class="mix category-b" data-order="2">B - 2</div>
+    <div class="mix category-b category-c" data-order="3">B C - 3</div>
+    <div class="mix category-a category-d" data-order="4">A D -4</div>
+</div>
+
+    <script src="dist/mixitup.min.js"></script>
+	<script>
+            var containerEl = document.querySelector('.container');
+            var mixer = mixitup(containerEl);
+    </script>
+</body>
+</html>
